@@ -1,0 +1,467 @@
+.main {
+    min-height: 100vh;
+    background-color: black;
+    scroll-snap-type: y mandatory;
+  }
+  .myAudioTag{
+    position: fixed;
+    left: 0;
+    top: 0;
+  }
+  #snapToThis{
+    scroll-snap-align: start;
+  }
+  .topOuterDiv{
+    width: 100%;
+    min-height: 100vh;
+    background-color: black;
+    display: flex;
+    position: relative;
+    z-index: -2;
+    overflow: hidden;
+    flex-wrap: wrap;
+  }
+  .backgroundImageHolder{
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+  .backgroundImageHolder img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  
+  }
+  
+  .leftTitle{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .leftTitle h1, .leftTitle p{
+    color: white;
+  }.leftTitle h1{
+    font-size: 5em;
+  }
+  .leftTitle p{
+    text-align: right;
+  }
+  .rightImg{
+    width: 40%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .rightImg img{
+    width: auto;
+    height: 65%;
+    position: absolute;
+    bottom: 0;
+    margin: auto;
+  }
+  .listDiv{
+    width: 100%;
+    height: calc(100vh - 70px);
+    background-color: rgba(0,0,0,0.95);
+    position: fixed;
+    border-bottom: 1px solid white;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+  .bigAvatar{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .bigAvatar img{
+    margin: auto;
+    width: 80%;
+    height: auto;
+    max-width: 350px;
+    border: 1px solid white
+  }
+  .bigAvatar img:hover{
+    border-radius: 50%;
+  }
+  .innerList{
+    width: 50%;
+    max-width: 600px;
+    height: 100%;
+    display: flex;
+  }
+  .songList{
+    margin: auto;
+    background-color: black;
+    width: 90%;
+    height: 95%;
+    overflow-y: scroll;
+    max-width: 350px;
+  }
+  /* Track */
+  .songList::-webkit-scrollbar-track {
+    background: white; 
+  } 
+  /* Handle */
+  .songList::-webkit-scrollbar-thumb {
+    background: #02c4ff; 
+  }
+  .songListHolder{
+    width: 98%;
+  }
+  .songList .songListDiv{
+    background-color: white;
+    border-radius: 4px;
+    margin: 7px auto
+  }
+  .songListHolder .songListDiv p{
+    color: black;
+  }
+  .audioPlayerOter{
+    width: 100%;
+    height: 70px;
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 1px 4px rgba(255, 255, 255, 0.305);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    z-index: 1;
+  }
+  .audioPlayerInner{
+    height: calc(100% - 10px);
+    width: calc(100% - 10px);
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+  }
+  
+  .avatarOrCover{
+    height: 45px;
+    width: 45px;
+    margin: auto;
+    border-radius: 7px;
+    overflow: hidden;
+  }
+  .avatarOrCover img{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+  }
+  .divSongD{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+  }
+  .divPlayBtns{
+    width: calc(20% - 50px);
+  }
+  .divSongD .titleAndCredHolder{
+    margin: auto 7%;
+  }
+  .divSongD h3, .divSongD p{
+    color: white;
+    height: 25px;
+    line-height: 25px;
+    overflow: hidden;
+  }
+  .divSongD p{
+    font-size: 0.7em;
+  }
+  .divSeekBar{
+    width: 40%;
+    display: flex;
+  }
+  .divSeekBar input{
+    width: 90%;
+    margin: auto;
+    height: 10px;
+    background-color: black;
+  }
+
+  .divSeekBar input[type=range]{
+    -webkit-appearance: none;
+  }
+  .divSeekBar input[type=range]::-moz-range-track, .divSeekBar input[type=range]::-webkit-range-track{
+    background-color: gray !important;
+  }
+  .divSeekBar input[type=range]::-moz-range-progress{
+    background-color: white !important;
+  }
+  .divSeekBar input[type=range]::-moz-range-thumb{
+    width: 7px;
+    height: 7px;
+    background: white !important;
+    border-radius: 0;
+    border: none;
+  }
+  .divSeekBar input[type=range]::-webkit-slider-runnable-track {
+    width: 300px;
+    height: 3px;
+    background: #ddd;
+    border: none;
+    border-radius: 3px;
+  }
+  .divSeekBar input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 0;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: white;
+    margin-top: -7px;
+  }
+  
+  
+  .btnsWraper{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .btnsWraper > div{
+    display: flex;
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+    opacity: 0.6;
+  }
+  .btnsWraper > div > img{
+    width: 100%;
+    height: auto;
+  }
+  .btnsWraper .preBtn{
+    transform: rotate(180deg);
+  }
+  .btnsWraper .playBtn{
+    opacity: 1;
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+    border: 1px solid white;
+    margin: 5px;
+  }
+  
+  .btnsWraper > div:hover{
+    opacity: 1;
+    cursor: pointer;
+  }
+  .btnsWraper .playBtn:hover{
+    height: 50px;
+    width: 50px;
+    margin: 0;
+  }
+  
+  .divExtraBtns{
+    display: flex;
+    width: 20%;
+    height: 100%;
+  }
+  .extraBtnWrp{
+    display: flex;
+    margin: auto;
+  }
+  .repeatBtn, .repeatList{
+    height: 50px;
+    width: 50px;
+    margin: auto;
+    opacity: 0.4;
+  }
+  
+  .repeatBtn:hover, .repeatList:hover{
+    opacity: 1;
+    cursor: pointer;
+  }
+  
+  .repeatBtn img, .repeatList img{
+    height: 100%;
+    width: 100%;
+  }
+  .songsListed{
+    background-color: black;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .listHolder{
+    margin: auto;
+    width: 100%;
+    max-width: 1100px;
+  }
+  .classicalHitsTitle{
+    margin: 50px auto 20px auto;
+  }
+  .classicalHitsTitle h2, .listSongName{
+    color: white;
+  }
+  .classicalHitsTitle h2{
+    text-align: center;
+  }
+  .songsList{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .songListDiv{
+    min-height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 7px 0 0;
+    border-radius: 35px;
+    border: 1px solid white;
+    margin: 3px 7px;
+  }
+  .songListDiv:hover{
+    background-color: deepskyblue;
+    cursor: pointer;
+  }
+  .listPlayBtn{
+    height: 35px;
+  }
+  .listPlayBtn img{
+    height: 100%;
+    width: 100%;
+  }
+  
+  .myFooter{
+    min-height: 100vh;
+    width: 100%;
+    background-color: black;
+    display: flex;
+  }
+  .innerFooter{
+    margin: auto;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  .innerFooter > div{
+    width: 33%;
+    text-align: center;
+    color: white;
+  }
+  .ledtInnerFooter{
+    margin: auto;
+    max-width: 300px;
+  }
+  .ledtInnerFooter img{
+    width: 80%;
+    height: auto;
+    border-radius: 10%;
+    margin: 7px;
+  }
+  .ledtInnerFooter img:hover{
+    border-radius: 0;
+    cursor: pointer;
+    width: calc(80% + 14px);
+    margin: 0;
+  }
+  .innerFooter > div a{
+    color: white;
+    text-decoration: none;
+  }
+  .innerFooter p{
+    margin: 14px auto;
+  }
+  .centerFooter h3{
+    font-size: 1.5em;  
+  }
+  .centerFooter h4{
+    font-size: 1.6em;  
+  }
+  .centerFooter p{
+    position: absolute;
+    bottom: 0;
+    width: 33%;
+  }
+  
+  /*!* All the same stuff for IE *!*/
+  /*.divSeekBar input[type=range]::-ms-thumb {*/
+  /*}*/
+  
+  @media(max-width: 1000px){
+    .leftTitle{
+      width: calc(100% - 40px);
+      padding: 15vh 20px;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    .leftTitle h1{
+      font-size: 2.9em;
+    }
+    .leftTitle p{
+      font-size: 0.8em;
+    }
+    .rightImg{
+      width: 100%;
+      align-items: flex-end;
+    }
+    .innerFooter{
+      flex-direction: column;
+    }  
+    .innerFooter > div{
+      width: 90%;
+    }
+    .innerFooter > div{
+      margin: 5vh auto;
+    }
+    .centerFooter p{
+      position: static;
+      width: 100%;
+    }
+    .divSeekBar,.avatarOrCover{
+      display: none;
+    }
+    .audioPlayerInner{
+      max-width: 500px;
+    }
+    .divSongD{
+      width: 35%;
+    }
+    .divPlayBtns{
+      width: 40%;
+    }
+    .divExtraBtns{
+      width: 25%;
+    }
+    .extraBtnWrp{
+      width: 100%;
+    }
+    .divExtraBtns > div{
+      margin: 0;
+    }
+    .innerFooter{
+      margin: auto auto 80px auto;
+    }
+  }
+  
+  @media(max-width: 750px){
+    .bigAvatar{
+      display: none;
+    }
+    .innerList{
+      width: 100%;
+    }
+  }
+  
+  
+  @media(max-width: 350px){
+    .centerFooter h3, .centerFooter h4{
+      font-size: 1em;
+    }
+  }
+  
