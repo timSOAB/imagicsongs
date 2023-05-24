@@ -44,7 +44,7 @@ export default async function Home() {
           </div>
         </div>
         <div className={styles.rightImg}>
-          <Image src="/images/singer-main.png" height={680} width={521} alt="Richard Marley" id={"myArtistImage"}></Image>
+          <Image src="/images/singer-mainOLD.png" height={680} width={521} alt="Richard Marley" id={"myArtistImage"}></Image>
         </div>
       </div>
       <div className={styles.listDiv} id="myListDiv">
