@@ -76,7 +76,7 @@ export default async function Home() {
             <div className={styles.divSongD}>
                 <div className={styles.titleAndCredHolder}>
                     <h3 id="myAudioTitle">Autumn Leaves</h3>
-                    <p>By Richard marley</p>
+                    <p>By Richard Marley</p>
                 </div>
             </div>
             <div className={styles.divPlayBtns}>
